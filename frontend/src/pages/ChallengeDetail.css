@@ -1,0 +1,453 @@
+.challenge-detail {
+  min-height: 100vh;
+  padding: 2rem;
+  color: var(--neon-green);
+  opacity: 1 !important;
+}
+
+.challenge-detail-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  background: transparent;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 2rem;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: var(--neon-green);
+  color: var(--bg-primary);
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+.challenge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--glow-color), 0 0 30px rgba(0, 255, 0, 0.3);
+  padding: 1rem 1.5rem;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 15px;
+}
+
+.challenge-category {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.challenge-level {
+  color: var(--neon-green);
+  opacity: 0.8;
+}
+
+.timer {
+  font-size: 1.2rem;
+  color: var(--neon-green);
+  font-weight: bold;
+}
+
+.challenge-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--neon-green);
+}
+
+.challenge-info {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--glow-color), 0 0 30px rgba(0, 255, 0, 0.3);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.challenge-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.challenge-details {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--neon-green);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.challenge-details p {
+  margin: 0.5rem 0;
+  opacity: 0.9;
+}
+
+.start-challenge-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--neon-green);
+}
+
+.btn-large {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.challenge-completed-info {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--glow-color), 0 0 30px rgba(0, 255, 0, 0.3);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.challenge-content {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--glow-color), 0 0 30px rgba(0, 255, 0, 0.3);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.email-preview,
+.password-preview,
+.scenario-preview {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--glow-color), 0 0 30px rgba(0, 255, 0, 0.3);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.email-header {
+  border-bottom: 1px solid var(--neon-green);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.email-header p {
+  margin: 0.5rem 0;
+}
+
+.email-body {
+  line-height: 1.6;
+}
+
+.question-item {
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 10px var(--glow-color);
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.question-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s;
+}
+
+.option-label:hover {
+  border-color: var(--neon-green);
+  background: var(--bg-overlay);
+}
+
+.option-label input[type="radio"] {
+  cursor: pointer;
+}
+
+.challenge-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.level-content {
+  width: 100%;
+  opacity: 1 !important;
+}
+
+.level-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--neon-green);
+}
+
+.scenario-container {
+  margin-bottom: 2rem;
+  opacity: 1 !important;
+}
+
+.question-container {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--glow-color), 0 0 30px rgba(0, 255, 0, 0.3);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  opacity: 1 !important;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--neon-green);
+}
+
+.option-label.selected {
+  background: rgba(0, 255, 0, 0.2);
+  border-color: var(--neon-green);
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+.hint-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--neon-green);
+}
+
+.hint-btn {
+  background: transparent;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.hint-btn:hover {
+  background: var(--neon-green);
+  color: var(--bg-primary);
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+.hint-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid var(--neon-green);
+  border-radius: 10px;
+  border-left: 4px solid var(--neon-green);
+}
+
+.hint-box p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.detail-item {
+  margin: 0.5rem 0;
+  opacity: 0.9;
+}
+
+.progress-section {
+  margin: 2rem 0;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 24px;
+  background: var(--bg-black);
+  border: 1px solid var(--neon-green);
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--neon-green);
+  box-shadow: 0 0 10px var(--glow-color);
+  transition: width 0.5s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.category-card {
+  min-height: 400px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .challenge-detail {
+    padding: 1.5rem;
+  }
+
+  .challenge-detail-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .challenge-detail {
+    padding: 1rem;
+  }
+
+  .challenge-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 1rem;
+  }
+
+  .challenge-title {
+    font-size: 1.5rem;
+  }
+
+  .challenge-info {
+    padding: 1.5rem;
+  }
+
+  .challenge-description {
+    font-size: 1rem;
+  }
+
+  .challenge-content {
+    padding: 1.5rem;
+  }
+
+  .email-preview,
+  .password-preview,
+  .scenario-preview {
+    padding: 1rem;
+  }
+
+  .question-item {
+    padding: 1rem;
+  }
+
+  .question-container {
+    padding: 1.5rem;
+  }
+
+  .question-text {
+    font-size: 1.1rem;
+  }
+
+  .challenge-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-large {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .level-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .challenge-detail {
+    padding: 0.75rem;
+  }
+
+  .challenge-header {
+    padding: 0.75rem;
+  }
+
+  .challenge-title {
+    font-size: 1.25rem;
+  }
+
+  .challenge-info {
+    padding: 1rem;
+  }
+
+  .challenge-description {
+    font-size: 0.9rem;
+  }
+
+  .challenge-content {
+    padding: 1rem;
+  }
+
+  .email-preview,
+  .password-preview,
+  .scenario-preview {
+    padding: 0.75rem;
+  }
+
+  .question-item {
+    padding: 0.75rem;
+  }
+
+  .question-container {
+    padding: 1rem;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .option-label {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .level-title {
+    font-size: 1.25rem;
+  }
+
+  .timer {
+    font-size: 1rem;
+  }
+}
+

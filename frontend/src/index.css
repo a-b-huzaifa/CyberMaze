@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --neon-green: #00FF00;
+  --neon-green-dark: #00CC00;
+  --neon-green-light: #33FF33;
+  --bg-black: #000000;
+  --bg-overlay: rgba(0, 0, 0, 0.8);
+  --glow-color: rgba(0, 255, 0, 0.7);
+  --glow-strong: rgba(0, 255, 0, 0.9);
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg-black);
+  color: var(--neon-green);
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Hide scrollbar but keep scrolling functionality */
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, Edge */
+  width: 0;
+  background: transparent;
+}
+
+html {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+body {
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--neon-green);
+  color: var(--bg-black);
+}
+
+::-moz-selection {
+  background-color: var(--neon-green);
+  color: var(--bg-black);
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  /* Hide on mobile if needed */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Show only on mobile */
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* Touch-friendly improvements */
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: rgba(0, 255, 0, 0.2);
+}
+
+/* Prevent text size adjustment on iOS */
+input,
+select,
+textarea,
+button {
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+@media (min-width: 769px) {
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 14px; /* Normal size on desktop */
+  }
+}
+

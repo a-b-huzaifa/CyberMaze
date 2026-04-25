@@ -1,0 +1,190 @@
+.profile {
+  min-height: calc(100vh - 80px);
+  padding: 40px 24px;
+}
+
+.profile-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 48px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px var(--glow-color);
+}
+
+.profile-welcome {
+  font-size: 24px;
+  margin-bottom: 32px;
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px var(--glow-color);
+  font-family: 'Courier New', monospace;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+}
+
+.profile-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--neon-green);
+  box-shadow: 0 0 15px var(--glow-color), 0 0 30px rgba(0, 255, 0, 0.3);
+  padding: 32px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 15px;
+}
+
+.profile-card h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--neon-green);
+  padding-bottom: 12px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.profile-value {
+  font-size: 16px;
+  padding: 12px;
+  background: var(--bg-black);
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+}
+
+.profile-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.password-change-form {
+  margin-top: 16px;
+}
+
+.password-change-form .form-group {
+  margin-bottom: 20px;
+}
+
+.password-change-form .input-field {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
+
+.password-change-form .input-field::placeholder {
+  color: var(--neon-green-dark);
+  opacity: 0.6;
+}
+
+.password-change-form .input-field:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--glow-color);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .profile-content {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .profile {
+    padding: 30px 20px;
+  }
+
+  .page-title {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .profile-welcome {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .profile-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-card {
+    padding: 24px 20px;
+  }
+
+  .profile-card h2 {
+    font-size: 20px;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-full {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    padding: 20px 16px;
+  }
+
+  .page-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  .profile-welcome {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .profile-card {
+    padding: 20px 16px;
+  }
+
+  .profile-card h2 {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 11px;
+  }
+
+  .profile-value {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
