@@ -2,17 +2,21 @@
 
 A comprehensive cybersecurity training platform with a distinctive binary rain matrix theme, featuring progressive difficulty challenges across multiple security domains.
 
+This project was developed as part of my final year as a Bachelor of Computer Science student. The initial concept came from my friend Sunain Ijaz (GitHub username: sunain007), who completed his bachelor’s degree in Cyber Security at UMT. I have built CyberMaze from scratch with careful engineering and the support of modern AI tools. It blends practical cybersecurity training with an immersive visual experience and a strong focus on usability, security, and learning progression.
+
 ---
 
 ## Features
 
 ### Visual Design
+
 - **Binary Rain Theme**: Animated matrix-style background with falling binary digits (0s and 1s)
 - **Cyberpunk Aesthetic**: Black background with neon green (`#00FF00`) text and glowing borders
 - **Monospace Typography**: Courier New font family throughout
 - **Semi-transparent Overlays**: Modern UI with backdrop blur effects
 
 ### Core Functionality
+
 - **Progressive Challenges**: 4 categories with 8 difficulty levels each:
   - Phishing Detection (Levels 1-8)
   - Password Security (Levels 1-8)
@@ -35,33 +39,35 @@ A comprehensive cybersecurity training platform with a distinctive binary rain m
 ## Tech Stack
 
 ### Frontend
-| Package | Purpose |
-|---|---|
-| React 18 + TypeScript | Core UI framework |
-| Vite | Build tool & dev server |
-| React Router DOM | Client-side routing |
-| Zustand | State management |
-| Framer Motion | Animations |
-| Axios | HTTP requests |
-| Socket.io-client | Real-time WebSocket connection |
-| React Hot Toast | Notification toasts |
+
+| Package               | Purpose                        |
+| --------------------- | ------------------------------ |
+| React 18 + TypeScript | Core UI framework              |
+| Vite                  | Build tool & dev server        |
+| React Router DOM      | Client-side routing            |
+| Zustand               | State management               |
+| Framer Motion         | Animations                     |
+| Axios                 | HTTP requests                  |
+| Socket.io-client      | Real-time WebSocket connection |
+| React Hot Toast       | Notification toasts            |
 
 ### Backend
-| Package | Purpose |
-|---|---|
-| Node.js + Express.js | Server framework |
-| Mongoose | MongoDB ODM (user data) |
-| pg | PostgreSQL client (challenges, scores) |
-| JSON Web Token (JWT) | Authentication tokens |
-| bcryptjs | Password hashing |
-| Socket.io | Real-time WebSocket server |
-| Helmet | HTTP security headers |
-| CORS | Cross-Origin Resource Sharing |
-| Express Rate Limit | API rate limiting |
-| Express Validator | Input validation |
-| Winston | Logging |
-| Morgan | HTTP request logger |
-| Compression | Response compression |
+
+| Package              | Purpose                                |
+| -------------------- | -------------------------------------- |
+| Node.js + Express.js | Server framework                       |
+| Mongoose             | MongoDB ODM (user data)                |
+| pg                   | PostgreSQL client (challenges, scores) |
+| JSON Web Token (JWT) | Authentication tokens                  |
+| bcryptjs             | Password hashing                       |
+| Socket.io            | Real-time WebSocket server             |
+| Helmet               | HTTP security headers                  |
+| CORS                 | Cross-Origin Resource Sharing          |
+| Express Rate Limit   | API rate limiting                      |
+| Express Validator    | Input validation                       |
+| Winston              | Logging                                |
+| Morgan               | HTTP request logger                    |
+| Compression          | Response compression                   |
 
 ---
 
@@ -76,6 +82,7 @@ Before you begin, make sure you have the following installed on your machine:
 - **Git** — [Download here](https://git-scm.com/)
 
 > **Verify your installations** by running these commands in your terminal:
+>
 > ```bash
 > node --version
 > npm --version
@@ -158,6 +165,7 @@ LOG_LEVEL=info
 > **Gmail App Password:** If you use Gmail for SMTP, go to your Google Account → Security → 2-Step Verification → App Passwords and generate one. Use that 16-character password as `SMTP_PASSWORD`.
 
 Go back to the root folder before proceeding:
+
 ```bash
 cd ..
 ```
@@ -167,7 +175,9 @@ cd ..
 ### Step 4 — Set Up the Databases
 
 #### MongoDB
+
 MongoDB requires no manual setup — just make sure the service is running. On Windows, it usually starts automatically. You can verify with:
+
 ```bash
 # Check if MongoDB is running (Windows)
 Get-Service -Name "*mongo*"
@@ -179,6 +189,7 @@ mongosh
 #### PostgreSQL — Create the Database
 
 Open your terminal and run:
+
 ```bash
 createdb -U postgres cybermaze
 ```
@@ -196,6 +207,7 @@ psql -U postgres -d cybermaze -f backend/src/database/schema.sql
 ```
 
 The following tables will be created:
+
 - `challenges` — stores all challenge questions
 - `challenge_submissions` — records every user's answers
 - `user_progress` — tracks scores and completed challenges per user
@@ -224,6 +236,7 @@ npm run dev
 ```
 
 This will concurrently start:
+
 - 🖥️ **Frontend** → [http://localhost:5173](http://localhost:5173)
 - ⚙️ **Backend API** → [http://localhost:3000](http://localhost:3000)
 
@@ -261,6 +274,7 @@ npm run dev
 ## Windows Users — Quick Start Script
 
 If you are on Windows, you can use the included PowerShell script instead of running everything manually. It automatically:
+
 - Checks if MongoDB and PostgreSQL are running
 - Creates `backend/.env` if it doesn't exist
 - Launches the development servers
@@ -311,28 +325,28 @@ cybermaze/
 
 ## Available npm Scripts
 
-| Command | Description |
-|---|---|
-| `npm run install:all` | Install all dependencies (root + frontend + backend) |
-| `npm run dev` | Start both frontend and backend in development mode |
-| `npm run dev:frontend` | Start only the frontend (port 5173) |
-| `npm run dev:backend` | Start only the backend (port 3000) |
-| `npm run build` | Build both frontend and backend for production |
-| `cd backend && npm run seed` | Seed the database with challenges and initial data |
-| `cd backend && npm run start` | Start the backend in production mode |
+| Command                         | Description                                          |
+| ------------------------------- | ---------------------------------------------------- |
+| `npm run install:all`         | Install all dependencies (root + frontend + backend) |
+| `npm run dev`                 | Start both frontend and backend in development mode  |
+| `npm run dev:frontend`        | Start only the frontend (port 5173)                  |
+| `npm run dev:backend`         | Start only the backend (port 3000)                   |
+| `npm run build`               | Build both frontend and backend for production       |
+| `cd backend && npm run seed`  | Seed the database with challenges and initial data   |
+| `cd backend && npm run start` | Start the backend in production mode                 |
 
 ---
 
 ## Common Issues & Fixes
 
-| Problem | Fix |
-|---|---|
-| `ECONNREFUSED` on port 27017 | MongoDB is not running. Start the MongoDB service. |
-| `ECONNREFUSED` on port 5432 | PostgreSQL is not running. Start the PostgreSQL service. |
-| `relation "challenges" does not exist` | You haven't run the schema yet. Run Step 5 above. |
-| `JWT_SECRET is not defined` | Your `backend/.env` file is missing or misconfigured. |
-| Frontend shows blank page | Make sure the backend is running on port 3000. |
-| `npm run install:all` fails | Run `npm install` inside `frontend/` and `backend/` manually. |
+| Problem                                  | Fix                                                                 |
+| ---------------------------------------- | ------------------------------------------------------------------- |
+| `ECONNREFUSED` on port 27017           | MongoDB is not running. Start the MongoDB service.                  |
+| `ECONNREFUSED` on port 5432            | PostgreSQL is not running. Start the PostgreSQL service.            |
+| `relation "challenges" does not exist` | You haven't run the schema yet. Run Step 5 above.                   |
+| `JWT_SECRET is not defined`            | Your `backend/.env` file is missing or misconfigured.             |
+| Frontend shows blank page                | Make sure the backend is running on port 3000.                      |
+| `npm run install:all` fails            | Run `npm install` inside `frontend/` and `backend/` manually. |
 
 ---
 
