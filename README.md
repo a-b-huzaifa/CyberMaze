@@ -227,6 +227,20 @@ cd ..
 
 ---
 
+### Step 5.5 — Admin Credentials
+
+When you seed the database, a default admin account is automatically created with the following credentials:
+
+| Field | Value |
+|-------|-------|
+| **Email** | `admin@cybermaze.com` |
+| **Username** | `admin` |
+| **Password** | `Admin@1234` |
+
+> ⚠️ **Important:** Change the admin password immediately after your first login in production environments. This is a default credential for development purposes only.
+
+---
+
 ### Step 6 — Start the Development Servers
 
 From the **root** of the project, run:
@@ -350,6 +364,12 @@ cybermaze/
 
 ---
 
-## License
+## Screenshots
 
-MIT
+![1777150671530](image/README/1777150671530.png)
+
+![1777150679750](image/README/1777150679750.png)
+
+![1777150691035](image/README/1777150691035.png)
+
+![1777150699699](image/README/1777150699699.png)
